@@ -4,19 +4,19 @@
   "description": "My Personal Website",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "Elliot",
-    "Clark"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elliot-Clark/My-Website.git"
+  },
   "author": "Elliot Clark",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
+  "bugs": {
+    "url": "https://github.com/Elliot-Clark/My-Website/issues"
   },
-  "devDependencies": {
-    "nodemon": "^1.19.1"
+  "homepage": "https://github.com/Elliot-Clark/My-Website#readme",
+  "dependencies": {
+    "trianglify": "^2.0.0"
   }
 }
