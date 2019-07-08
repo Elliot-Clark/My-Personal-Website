@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/Elliot-Clark/My-Website/issues"
   },
-  "homepage": "https://github.com/Elliot-Clark/My-Website#readme",
-  "dependencies": {
-    "trianglify": "^2.0.0"
-  }
+  "homepage": "https://github.com/Elliot-Clark/My-Website#readme"
 }

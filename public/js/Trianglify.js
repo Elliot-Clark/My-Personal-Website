@@ -1,11 +1,13 @@
+let trianglifyHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
+
 var pattern = Trianglify({
-    cell_size: 200,
+    cell_size: 100,
     x_colors: ['#000000', '#4CAFE8', '#FFFFFF'],
     y_colors: 'match_x',
-    stroke_width: 111.51,
+    stroke_width: 51.51,
     seed: 'byttg',
     width: window.innerWidth,
-    height: window.innerHeight
+    height: trianglifyHeight
 });
 document.body.appendChild(pattern.canvas());
 

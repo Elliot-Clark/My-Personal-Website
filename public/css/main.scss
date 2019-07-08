@@ -11,27 +11,92 @@ html, body {
     padding: 0;
 }
 
+.background {
+    background: darkblue;
+    width: 100%;
+    height: 2000px;
+    position: absolute;
+    z-index: -9;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
+    from(rgba(0,110,0,.5)), to(rgba(0,0,0,0)));
+}
+
 #header {
     color: #466573;
     font-weight: bold;
     height: 100vh;
+    padding: 3% 3% 0% 3%;
 
-    .header-container {
-        position: relative;
-        top: 50%;
-        margin: 0 auto;
-        border-radius: 20px;
-        box-shadow: 0 1.5em 2em 0 rgba(0,0,0,0.133);
-        text-align: center;
-        background-color: $primary;
-        width: 40vh;
+    #header-container {
+        height: 100%;
 
-        .header-title {
-            font-size: 4rem;
+        #header-title {
+            font-size: 222px;
+            color: black;
+            background-color: green;
+            display: inline;
+            position: absolute;
+            border-radius: 60px 0;
+            opacity: 2;
         }
-        .header-name {
-            font-size: 3rem;
+
+        svg {
+            width: 300px;
+            margin-left: 50px;
+            align-self: center;
+            justify-self: center;
+            opacity: 1;
+            animation-name: EC_Svg;
+            animation-duration: 1s;
+            animation-delay: 2s;
         }
+
+        @keyframes EC_Svg {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        svg #Top_C {
+            animation-name: Top_C;
+            animation-duration: 1.3s;
+        }
+        @keyframes Top_C {
+            from {transform: translate(-120px, 50px); transform: rotate(60deg);}
+            to {transform: translate(0px, -0px); transform: rotate(0deg);}
+          }
+        svg #Bottom_C {
+            animation-name: Bottom_C;
+            animation-duration: 1.6s;
+        }
+        @keyframes Bottom_C {
+            from {transform: translate(0px, 0px); transform: rotate(-40deg);}
+            to {transform: translate(0px, -0px); transform: rotate(00deg);}
+          }
+
+        svg #Top_E {
+            animation-name: Top_E;
+            animation-duration: 1s;
+        }
+        @keyframes Top_E {
+            from {transform: translate(0px, -130px);}
+            to {transform: translate(0px, -0px);}
+          }
+        svg #Middle_E {
+            animation-name: Middle_E;
+            animation-duration: 2s;
+        }
+        @keyframes Middle_E {
+            from {transform: translate(0px, 0px); transform: rotate(50deg);}
+            to {transform: translate(0px, 0px); transform: rotate(0deg);}
+          }
+        svg #Bottom_E {
+            animation-name: Bottom_E;
+            animation-duration: 1.7s;
+        }
+        @keyframes Bottom_E {
+            from {transform: translate(0px, 120px);}
+            to {transform: translate(0px, -0px);}
+          }
     }
 }
 
@@ -41,11 +106,11 @@ html, body {
 }
 
 footer {
-    background-color: #f7f7f7;
+    background-color: #757575;
     opacity: .5;
     text-align: center;
     font-weight: bold;
-    color: #666;
+    color: #000;
     width: 100%;
     margin-top: 3em;
     font-size: 1.5rem;
