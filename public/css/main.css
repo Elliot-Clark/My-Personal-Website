@@ -1,51 +1,66 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding: 0;
 }
 
 html, body {
   margin: 0;
   padding: 0;
-}
-
-.background {
-  background: darkblue;
-  width: 100%;
-  height: 2000px;
-  position: absolute;
-  z-index: -9;
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 110, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+  overflow-x: hidden;
 }
 
 #header {
-  color: #466573;
-  font-weight: bold;
   height: 100vh;
-  padding: 3% 3% 0% 3%;
 }
 
 #header #header-container {
-  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 1px solid black;
+  padding-top: 20px;
+  -webkit-box-shadow: 1em -1.5em 2em 0 rgba(0, 0, 0, 0.333);
+          box-shadow: 1em -1.5em 2em 0 rgba(0, 0, 0, 0.333);
+  background-color: white;
+  -webkit-animation-name: header-container;
+          animation-name: header-container;
+  -webkit-animation-duration: 1.7s;
+          animation-duration: 1.7s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-#header #header-container #header-title {
-  font-size: 222px;
-  color: black;
-  background-color: green;
-  display: inline;
-  position: absolute;
-  border-radius: 60px 0;
-  opacity: 2;
+@-webkit-keyframes header-container {
+  0% {
+    top: 50%;
+  }
+  12% {
+    top: 56%;
+  }
+  100% {
+    top: 30%;
+  }
+}
+
+@keyframes header-container {
+  0% {
+    top: 50%;
+  }
+  12% {
+    top: 56%;
+  }
+  100% {
+    top: 30%;
+  }
 }
 
 #header #header-container svg {
-  width: 300px;
-  margin-left: 50px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  width: 15vw;
   opacity: 1;
   -webkit-animation-name: EC_Svg;
           animation-name: EC_Svg;
@@ -84,8 +99,8 @@ html, body {
   from {
     -webkit-transform: translate(-120px, 50px);
             transform: translate(-120px, 50px);
-    -webkit-transform: rotate(60deg);
-            transform: rotate(60deg);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   to {
     -webkit-transform: translate(0px, 0px);
@@ -99,8 +114,8 @@ html, body {
   from {
     -webkit-transform: translate(-120px, 50px);
             transform: translate(-120px, 50px);
-    -webkit-transform: rotate(60deg);
-            transform: rotate(60deg);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   to {
     -webkit-transform: translate(0px, 0px);
@@ -121,8 +136,8 @@ html, body {
   from {
     -webkit-transform: translate(0px, 0px);
             transform: translate(0px, 0px);
-    -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
+    -webkit-transform: rotate(-80deg);
+            transform: rotate(-80deg);
   }
   to {
     -webkit-transform: translate(0px, 0px);
@@ -136,8 +151,8 @@ html, body {
   from {
     -webkit-transform: translate(0px, 0px);
             transform: translate(0px, 0px);
-    -webkit-transform: rotate(-40deg);
-            transform: rotate(-40deg);
+    -webkit-transform: rotate(-80deg);
+            transform: rotate(-80deg);
   }
   to {
     -webkit-transform: translate(0px, 0px);
@@ -187,8 +202,8 @@ html, body {
   from {
     -webkit-transform: translate(0px, 0px);
             transform: translate(0px, 0px);
-    -webkit-transform: rotate(50deg);
-            transform: rotate(50deg);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   to {
     -webkit-transform: translate(0px, 0px);
@@ -202,8 +217,8 @@ html, body {
   from {
     -webkit-transform: translate(0px, 0px);
             transform: translate(0px, 0px);
-    -webkit-transform: rotate(50deg);
-            transform: rotate(50deg);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   to {
     -webkit-transform: translate(0px, 0px);
@@ -239,6 +254,84 @@ html, body {
   to {
     -webkit-transform: translate(0px, 0px);
             transform: translate(0px, 0px);
+  }
+}
+
+#header #header-text {
+  position: absolute;
+  padding: 1rem;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  border: 1px solid black;
+  background-color: white;
+  opacity: 0;
+  -webkit-animation-name: header-text;
+          animation-name: header-text;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  white-space: nowrap;
+}
+
+@-webkit-keyframes header-text {
+  from {
+    opacity: 0;
+    max-width: 0;
+  }
+  to {
+    opacity: 1;
+    max-width: 1000px;
+  }
+}
+
+@keyframes header-text {
+  from {
+    opacity: 0;
+    max-width: 0;
+  }
+  to {
+    opacity: 1;
+    max-width: 1000px;
+  }
+}
+
+#header #header-text h1 {
+  opacity: 0;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-delay: 4.4s;
+          animation-delay: 4.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-name: header-text-h1;
+          animation-name: header-text-h1;
+}
+
+@-webkit-keyframes header-text-h1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes header-text-h1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
