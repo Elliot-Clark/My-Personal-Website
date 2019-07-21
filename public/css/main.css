@@ -10,8 +10,14 @@ html, body {
   overflow-x: hidden;
 }
 
+#trianglifyBackground {
+  opacity: 0;
+}
+
 #header {
-  height: 100vh;
+  height: 0vh;
+  opacity: 0;
+  cursor: pointer;
 }
 
 #header #header-container {
@@ -22,8 +28,8 @@ html, body {
           transform: translate(-50%, -50%);
   border: 1px solid black;
   padding-top: 20px;
-  -webkit-box-shadow: 1em -1.5em 2em 0 rgba(0, 0, 0, 0.333);
-          box-shadow: 1em -1.5em 2em 0 rgba(0, 0, 0, 0.333);
+  -webkit-box-shadow: 1em -1.5em 3em 0 rgba(0, 0, 0, 0.333);
+          box-shadow: 1em -1.5em 3em 0 rgba(0, 0, 0, 0.333);
   background-color: white;
   -webkit-animation-name: header-container;
           animation-name: header-container;
@@ -60,7 +66,7 @@ html, body {
 }
 
 #header #header-container svg {
-  width: 15vw;
+  width: 15rem;
   opacity: 1;
   -webkit-animation-name: EC_Svg;
           animation-name: EC_Svg;
@@ -258,8 +264,10 @@ html, body {
 }
 
 #header #header-text {
-  position: absolute;
+  width: auto;
   padding: 1rem;
+  position: absolute;
+  word-wrap: break-word;
   top: 60%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -268,17 +276,54 @@ html, body {
   border: 1px solid black;
   background-color: white;
   opacity: 0;
+  white-space: nowrap;
   -webkit-animation-name: header-text;
           animation-name: header-text;
-  -webkit-animation-duration: 1.2s;
-          animation-duration: 1.2s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
   -webkit-animation-delay: 3.5s;
           animation-delay: 3.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
+}
+
+#header #header-text h1 {
+  opacity: 0;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-name: header-text-h1;
+          animation-name: header-text-h1;
   white-space: nowrap;
+}
+
+@-webkit-keyframes header-text-h1 {
+  from {
+    opacity: 0;
+    white-space: nowrap;
+  }
+  to {
+    opacity: 1;
+    white-space: normal;
+  }
+}
+
+@keyframes header-text-h1 {
+  from {
+    opacity: 0;
+    white-space: nowrap;
+  }
+  to {
+    opacity: 1;
+    white-space: normal;
+  }
 }
 
 @-webkit-keyframes header-text {
@@ -303,44 +348,72 @@ html, body {
   }
 }
 
-#header #header-text h1 {
-  opacity: 0;
-  -webkit-animation-duration: 1.2s;
-          animation-duration: 1.2s;
-  -webkit-animation-delay: 4.4s;
-          animation-delay: 4.4s;
+.header-transition {
+  -webkit-animation-name: header-transition;
+          animation-name: header-transition;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-  -webkit-animation-name: header-text-h1;
-          animation-name: header-text-h1;
 }
 
-@-webkit-keyframes header-text-h1 {
-  from {
-    opacity: 0;
-  }
-  to {
+@-webkit-keyframes header-transition {
+  0% {
     opacity: 1;
+    height: 100vh;
+  }
+  100% {
+    opacity: 0;
+    height: 0vh;
   }
 }
 
-@keyframes header-text-h1 {
-  from {
-    opacity: 0;
-  }
-  to {
+@keyframes header-transition {
+  0% {
     opacity: 1;
+    height: 100vh;
+  }
+  100% {
+    opacity: 0;
+    height: 0vh;
   }
 }
 
 #skills {
+  display: block;
   font-size: 40px;
-  height: 1000px;
+  -webkit-animation-name: skills-transition;
+          animation-name: skills-transition;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes skills-transition {
+  from {
+    opacity: 0;
+    height: 0vh;
+  }
+  to {
+    opacity: 1;
+    height: 110vh;
+  }
+}
+
+@keyframes skills-transition {
+  from {
+    opacity: 0;
+    height: 0vh;
+  }
+  to {
+    opacity: 1;
+    height: 110vh;
+  }
 }
 
 footer {
+  display: none;
   background-color: #757575;
   opacity: .5;
   text-align: center;

@@ -13,8 +13,14 @@ html, body {
     overflow-x: hidden;
 }
 
+#trianglifyBackground {
+    opacity: 0;
+}
+
 #header {
-    height: 100vh;
+    height: 0vh; //100vh
+    opacity: 0;
+    cursor: pointer;
 
     #header-container {
         position: absolute;
@@ -24,7 +30,7 @@ html, body {
         transform: translate(-50%, -50%);
         border: 1px solid black;
         padding-top: 20px;
-        box-shadow: 1em -1.5em 2em 0 rgba(0,0,0,0.333);
+        box-shadow: 1em -1.5em 3em 0 rgba(0,0,0,0.333);
         background-color: white;
         animation-name: header-container;
         animation-duration: 1.7s;
@@ -38,7 +44,7 @@ html, body {
         }
 
         svg {
-            width: 15vw;
+            width: 15rem;
             opacity: 1;
             animation-name: EC_Svg;
             animation-duration: 1s;
@@ -57,7 +63,7 @@ html, body {
         @keyframes Top_C {
             from {transform: translate(-120px, 50px); transform: rotate(90deg);}
             to {transform: translate(0px, -0px); transform: rotate(0deg);}
-          }
+        }
         svg #Bottom_C {
             animation-name: Bottom_C;
             animation-duration: 1.6s;
@@ -65,7 +71,7 @@ html, body {
         @keyframes Bottom_C {
             from {transform: translate(0px, 0px); transform: rotate(-80deg);}
             to {transform: translate(0px, -0px); transform: rotate(00deg);}
-          }
+        }
 
         svg #Top_E {
             animation-name: Top_E;
@@ -74,7 +80,7 @@ html, body {
         @keyframes Top_E {
             from {transform: translate(0px, -130px);}
             to {transform: translate(0px, -0px);}
-          }
+        }
         svg #Middle_E {
             animation-name: Middle_E;
             animation-duration: 2s;
@@ -82,7 +88,7 @@ html, body {
         @keyframes Middle_E {
             from {transform: translate(0px, 0px); transform: rotate(90deg);}
             to {transform: translate(0px, 0px); transform: rotate(0deg);}
-          }
+        }
         svg #Bottom_E {
             animation-name: Bottom_E;
             animation-duration: 1.7s;
@@ -90,12 +96,14 @@ html, body {
         @keyframes Bottom_E {
             from {transform: translate(0px, 120px);}
             to {transform: translate(0px, -0px);}
-          }
+        }
     }
 
     #header-text {
-        position: absolute;
+        width: auto;
         padding: 1rem;
+        position: absolute;
+        word-wrap: break-word;
         top: 60%;
         left: 50%;
         -ms-transform: translate(-50%, -50%);
@@ -104,42 +112,63 @@ html, body {
         border: 1px solid black;
         background-color: white;
         opacity: 0;
+        white-space: nowrap;
         animation-name: header-text;
-        animation-duration: 1.2s;
+        animation-duration: 1.5s;
         animation-delay: 3.5s;
         animation-fill-mode: forwards;
         animation-timing-function: ease-in-out;
-        white-space:nowrap;
+        
 
-        @keyframes header-text {
-        from {opacity: 0; max-width: 0;}
-        to {opacity: 1; max-width: 1000px;}
+        h1 {
+            opacity: 0;
+            animation-duration: 1.2s;
+            animation-delay: 4s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in;
+            animation-name: header-text-h1;
+            white-space: nowrap;
+
+            @keyframes header-text-h1 {
+                from {opacity: 0; white-space: nowrap;}
+                to {opacity: 1; white-space: normal;}
+            }
         }
 
-            h1 {
-                opacity: 0;
-                animation-duration: 1.2s;
-                animation-delay: 4.4s;
-                animation-fill-mode: forwards;
-                animation-timing-function: ease-in;
-                animation-name: header-text-h1;
+        @keyframes header-text {
+            from {opacity: 0; max-width: 0;}
+            to {opacity: 1; max-width: 1000px; }
+        }
 
-                @keyframes header-text-h1 {
-                    from {opacity: 0;}
-                    to {opacity: 1;}
-                }
-            }
     }
+}
 
-    
+.header-transition {
+    animation-name: header-transition;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+    @keyframes header-transition {
+        0% {opacity: 1; height: 100vh;}
+        100% {opacity: 0; height: 0vh;}
+    }
 }
 
 #skills {
+    display: block; //None
     font-size: 40px;
-    height: 1000px;
+    animation-name: skills-transition;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+    @keyframes skills-transition {
+        from {opacity: 0; height: 0vh;}
+        to {opacity: 1; height: 110vh}
+    }
 }
 
 footer {
+    display: none;
     background-color: #757575;
     opacity: .5;
     text-align: center;

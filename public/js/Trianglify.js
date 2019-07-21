@@ -1,29 +1,13 @@
-let trianglifyHeight = (document.height !== undefined) ? document.height : document.body.offsetHeight;
-
-/* setInterval(function(){ 
-        var pattern = Trianglify({
-            cell_size: 1100,
-            x_colors: ['#000000', '#4CAFE8', '#FFFFFF'],
-            y_colors: 'match_x',
-            stroke_width: 51.51,
-            seed: 'byttg',
-            width: window.innerWidth,
-            height: trianglifyHeight
-        });
-        document.body.appendChild(pattern.canvas());
-}, 3000); */
-
+'use strict'
 
 var pattern = Trianglify({
-    cell_size: 40,
+    cell_size: 50,
     x_colors: ['#000000', '#4CAFE8', '#FFFFFF'],
     y_colors: 'match_x',
-    stroke_width: 51.51,
+    stroke_width: 2.51,
     seed: 'byttg',
     width: window.innerWidth,
-    height: window.innerHeight
+    height: window.innerHeight + 1
 });
-document.body.appendChild(pattern.canvas());
-
-
-    
+var trianglifyBackground = document.getElementById("trianglifyBackground");
+trianglifyBackground.appendChild(pattern.canvas());
