@@ -3,9 +3,9 @@
 var pattern = Trianglify({
     cell_size: 50,
     x_colors: ['#000000', '#4CAFE8', '#FFFFFF'],
-    y_colors: 'match_x',
+    y_colors: 'random',
     stroke_width: 2.51,
-    seed: 'byttg',
+    seed: 'null',
     width: window.innerWidth,
     height: window.innerHeight + 1
 });

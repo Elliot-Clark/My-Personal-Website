@@ -5,5 +5,5 @@
 //     for (let x = 0; x < ele.length; x++) {
 //         ele[x].classList.add('header-transition');
 //     }
-//     document.getElementById("skills").style.display = "block";
+//     document.getElementById("profile").style.display = "block";
 //   });

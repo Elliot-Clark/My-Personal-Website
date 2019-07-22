@@ -2,16 +2,18 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
+  margin: 0;
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 #trianglifyBackground {
   opacity: 0;
+  position: absolute;
+  top: 0;
 }
 
 #header {
@@ -379,42 +381,120 @@ html, body {
   }
 }
 
-#skills {
+#profile {
+  height: 100vh;
+  padding: 5% calc(20% - 100px);
+  background: #F3EFE0;
   display: block;
-  font-size: 40px;
-  -webkit-animation-name: skills-transition;
-          animation-name: skills-transition;
+  -webkit-animation-name: profile-transition;
+          animation-name: profile-transition;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  text-align: center;
 }
 
-@-webkit-keyframes skills-transition {
+#profile h1 {
+  font-size: 70px;
+  padding-bottom: 20px;
+}
+
+@-webkit-keyframes profile-transition {
   from {
     opacity: 0;
     height: 0vh;
   }
   to {
     opacity: 1;
-    height: 110vh;
+    height: 150vh;
   }
 }
 
-@keyframes skills-transition {
+@keyframes profile-transition {
   from {
     opacity: 0;
     height: 0vh;
   }
   to {
     opacity: 1;
-    height: 110vh;
+    height: 150vh;
   }
+}
+
+#profile #profile-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#profile #profile-container #profile-container-about {
+  width: 30%;
+}
+
+#profile #profile-container #profile-container-picture {
+  width: 30%;
+}
+
+#profile #profile-container #profile-container-picture img {
+  width: 25vw;
+  padding-top: 4rem;
+}
+
+#profile #profile-container #profile-container-details {
+  width: 30%;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #9e9e9e;
+}
+
+hr::after {
+  content: "";
+  display: block;
+  height: 40px;
+}
+
+#experiences {
+  padding: 5% 20%;
+  font-size: 2rem;
+  background: #FFF;
+}
+
+#experiences h1 {
+  text-align: center;
+  color: #22A39F;
+  margin-bottom: 20px;
+}
+
+#experiences .education-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#experiences .education-information p:nth-child(1) {
+  width: 30%;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#experiences .education-information p:nth-child(2) {
+  width: 60%;
+  font-size: 17px;
 }
 
 footer {
   display: none;
-  background-color: #757575;
+  background-color: #434242;
   opacity: .5;
   text-align: center;
   font-weight: bold;
@@ -423,12 +503,5 @@ footer {
   margin-top: 3em;
   font-size: 1.5rem;
   padding: 1em;
-}
-
-canvas {
-  position: absolute;
-  top: 0;
-  z-index: -99;
-  opacity: 100;
 }
 /*# sourceMappingURL=main.css.map */
