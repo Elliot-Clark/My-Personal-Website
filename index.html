@@ -31,12 +31,12 @@
                 </div>
             </div>
             <div id="header-text">
-                    <h1>Hi, I'm Elliot Clark. I'm a Front End Web Developer</h1>
+                    <h1 id="logo"></h1>
             </div>
         </section>
 
         <section id="profile">
-            <h1>Profile</h1>
+            <h1 class="h1-titles">Profile</h1>
             <h2>I'm a creative Front End Web Developer</h2>
             <hr>
             <div id="profile-container">
@@ -48,21 +48,26 @@
                     <img src="res/image-placeholder.png" alt="Elliot Clark - Profile Image">
                 </div>
                 <div id="profile-container-details">
-                    Name, Location, Hobbiess
+                    <h4>Name:</h4>
+                    Elliot Clark <br><br>
+                    <h4>Location</h4>
+                    Silicon Valley<br><br>
+                    <h4>Hobbies</h4>
+                    Gaming, Creating, Animating, and Writing
                 </div>
             </div>
         </section>
 
         <section id="experiences">
             <div id="education">
-                <h1>Education</h1>
+                <h1 class="h1-titles">Education</h1>
                 <hr>
                 <div class="education-information">
                     <p>Cal Poly Pomona</p>
                     <p>I graduated from California State Polytechnic University in Pomona, California with a Bachelor of Business Administration degree.</p>
                 </div>
                 <div class="education-information">
-                    <p>Udacity Front-End Developer Nanodegree</p>
+                    <p>Udacity Front-End Web Developer Nanodegree</p>
                     <p>I graduated from the online Udacity Naneodegree Course, learning the basics many different Front End technologies. </p>
                 </div>
                 <div class="education-information">
@@ -71,29 +76,64 @@
                 </div>
             </div>
             <hr>
-                <div class="skills">
-                    <h1>Skills</h1>  
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>Javascript</li>
-                    <li>React</li>
-                    <li>Node.js</li>
-                    <li>Sass</li>
-                    <li>Git</li>
-                    <li>Github</li>
-                    <li>Adobe Premiere</li>
-                    <li>Adobe Illustrator</li>
-                    <li>Adobe Flash</li>
-                </ul>
+            <h1 class="h1-titles">My Skills</h1>
+            <div id="skills">
+                <div class="skills-crossword">
+                    <h2>Across</h2><hr>
+                    <li>4. A JavaScript runtime environment that executes code outside of a browser.</li>
+                    <li>5. A preprocessor scripting language that is interpreted or compiled into CSS.</li>
+                    <li>6. <i>The</i> programming language of HTML and the Web.</li>
+                    <li>7. The standard markup language for documents designed to be displayed in a web browser.</li>
+                    <li>8. A set of Creative Cloud applications I am experienced in. Including Photoshop, Premiere, and Illustrator. The latter of which was used to create this very crossword!</li>
                 </div>
+                <div class="skills-crossword">
+                    <h2>Down</h2><hr>
+                    <li>1. A component-based JavaScript library for building user interfaces.</li>
+                    <li>2. A style sheet language used for describing the presentation of a document written in a markup language like HTML.</li>
+                    <li>3. A syntax for storing and exchanging data written with JavaScript object notation.</li>
+                    <li>9. Abbreviation for 6 Across.</li>
+                    <li>10. A website that provides hosting for software development version control using Git.</li>
+                </div>
+            </div>
+            <img src="/res/skills-crossword.svg" alt="Skills Crossword Puzzle Vector">
+            <!-- Yes, it's filled in already because it would be annoying to solve just to figure out what I know. At least I think it would be. -->
+        </section>
 
+        <section id="sample-projects">
+            <h1 class="h1-titles">Projects</h1><hr>
+                <div class="projects">
+                    <div class="project">
+                        <h2>Tic Tac Toe Game</h2>
+                        <img id="test" src="res/Tic-Tac-Toe.png" alt="Tic Tac Toe Game - Elliot Clark">
+                        <p>A simple design, easy to play, and hard to win 4x4 Tic Tac Toe vs. an Ai.</p>
+                    </div>
+                    <div class="project">
+                        <h2>Udacity Book Project</h2>
+                        <a target="_blank" rel="noopener noreferrer" href=https://github.com/Elliot-Clark/MyReads><img src="res/image-placeholder.png" alt="Book - Elliot Clark"></a>
+                        <p>One of my final projects for my Udacity education was to </p>
+                    </div>
+                </div>
+                <div class="projects">
+                    <div class="project">
+                        <h2>Crate & Barrel Box Calculator</h2>
+                        <a target="_blank" rel="noopener noreferrer" href=https://github.com/Elliot-Clark/Box-Calculator><img src="res/Crate Box Calculator.png" alt="Box - Elliot Clark"></a>
+                        <p>A simple calculator that takes an inputted length, width, and height of a measured area and returns the most appriopriate fitting box size from a list of avaiable sizes. While not the most galmorious project in the world, I included it in this list because I'm proud of it. I made this calculator to save time while working at Crate & Barrel and serves as the first time I've really used my coding skills to make something that is helpful to others. Used daily by myself and my coworkers at Crate & Barrel when packaging items.</p>
+                    </div>
+                    <div class="project">
+                        <h2>Portfiolo Website</h2>
+                        <a target="_blank" rel="noopener noreferrer" href=https://github.com/Elliot-Clark/My-Website><img src="res/image-placeholder.png" alt="Book - Elliot Clark"></a>
+                        <p>Literally just the webpage you are on at this very moment. Made using such tools like Service Workers, SASS, and Mini</p>
+                    </div>
+                </div>
+        </section>
 
-
+        <section id="contact">
+             <h1 class="h1-titles">Contact Me</h1><hr>
         </section>
 
         <footer>
-            Elliot Clark<sup>©</sup> 2019
+            © Elliot Clark 2019<br>
+            All Rights Reserved
         </footer>
 
         <script src="public/js/app.js" async defer></script>

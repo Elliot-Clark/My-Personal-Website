@@ -1,6 +1,6 @@
-$BG: #F3EFE0;
 $BG2: #FFF;
-$tertiary: #e6f1f7;
+$padding: 5% calc(25% - 100px);
+$BG: #F4EEE1;
 
 * {
     box-sizing: border-box;
@@ -13,16 +13,31 @@ html, body {
     font-family: 'Open Sans', sans-serif !important;
 }
 
+hr {
+    border: 0;
+    border-top: 1px solid rgb(158, 158, 158);
+}
+
+hr::after {
+    content: "";
+    display: block;
+    height: 40px;
+}
+
+.h1-titles {
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(255, 160, 51);
+    margin-bottom: 20px;
+}
+
+
 #trianglifyBackground {
-    opacity: 0; // 1
     position: absolute;
-    top: 0;
 }
 
 #header {
-    height: 0vh; //100vh
-    opacity: 0;  // 1
-    cursor: pointer;
+    height: 100vh;
 
     #header-container {
         position: absolute;
@@ -145,37 +160,10 @@ html, body {
     }
 }
 
-.header-transition {
-    animation-name: header-transition;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-
-    @keyframes header-transition {
-        0% {opacity: 1; height: 100vh;}
-        100% {opacity: 0; height: 0vh;}
-    }
-}
-
 #profile {
-    height: 100vh;
-    padding: 5% calc(20% - 100px);
+    padding: $padding;
     background: $BG;
-    display: block; //None
-    animation-name: profile-transition;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
     text-align: center;
-
-    h1 {
-        font-size: 70px;
-        padding-bottom: 20px;
-
-    }
-
-    @keyframes profile-transition {
-        from {opacity: 0; height: 0vh;}
-        to {opacity: 1; height: 150vh}
-    }
 
     #profile-container {
         display: flex;
@@ -185,42 +173,24 @@ html, body {
             width: 30%;
         }
 
-        #profile-container-picture {
-            width: 30%;
-
-            img {
-                width: 25vw;
-                padding-top: 4rem;
-            }
-        }
-
         #profile-container-details {
             width: 30%;
         }
+
+        img {
+            width: inherit;
+            min-width: 250px;
+            max-width: 320px;
+            padding-top: 2rem;
+        }
     }
-}
-
-hr {
-    border: 0;
-    border-top: 1px solid rgb(158, 158, 158);
-}
-
-hr::after {
-    content: "";
-    display: block;
-    height: 40px;
 }
 
 #experiences {
-    padding: 5% 20%;
+    padding: $padding;
     font-size: 2rem;
     background: $BG2;
 
-    h1 {
-        text-align: center;
-        color: #22A39F;
-        margin-bottom: 20px;
-    }
 
     .education-information {
         display: flex;
@@ -239,16 +209,71 @@ hr::after {
         font-size: 17px;
     }
 
+    #skills {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+
+        .skills-crossword {
+            padding-bottom: 40px;
+            width: 45%;
+
+            h2 {
+                text-align: center;
+            }
+
+            li {
+                font-size: 23px;
+            }
+        }
+    }
+
+}
+
+#sample-projects {
+    padding: $padding;
+    background: $BG;
+
+    .projects {
+        margin: 5%;
+        display: flex;
+        justify-content: space-between;
+
+        .project {
+            width: 45%;
+            text-align: center;
+            position: relative;
+
+            h2 {
+                margin-bottom: 40px;
+            }
+
+            img {
+                width: 170px;
+                margin: 5%;
+                border-radius: 20px;
+                box-shadow: 1em -.66em 1.5em .3em rgba(0,0,0,0.333);
+                cursor: pointer;
+                transition: all .3s ease-in-out;
+            }
+
+            img:hover {
+                transform: scale(1.2);
+                box-shadow: .3em -.22em 1.5em 0em rgba(0,0,0,0.333);
+            }
+        }
+    }
+}
+
+#contact {
+    padding: $padding;
+
 }
 
 footer {
-    display: none;
-    background-color: #434242;
-    opacity: .5;
+    background-color: $BG;
     text-align: center;
     font-weight: bold;
-    color: #000;
-    width: 100%;
     margin-top: 3em;
     font-size: 1.5rem;
     padding: 1em;
