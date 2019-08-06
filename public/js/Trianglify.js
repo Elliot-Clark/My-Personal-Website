@@ -1,7 +1,7 @@
 'use strict'
 
 //#F2EDE2
-
+//Code is written to redraw the Trianglify background whenever the screen size changes
 const render = () => {
     if (document.getElementsByTagName("canvas")[0]) {
         document.getElementsByTagName("canvas")[0].remove();
