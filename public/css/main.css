@@ -374,24 +374,23 @@ hr::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#profile #profile-container #profile-container-about {
-  width: 30%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 #profile #profile-container #profile-container-details {
   width: 30%;
 }
 
+#profile #profile-container #profile-container-about {
+  width: 30%;
+}
+
 #profile #profile-container img {
-  width: inherit;
   min-width: 250px;
-  max-width: 320px;
-  padding-top: 2rem;
+  max-width: 350px;
+  min-height: 350px;
+  padding: 2rem;
 }
 
 #experiences {
@@ -411,7 +410,7 @@ hr::after {
 }
 
 #experiences .education-information p:nth-child(1) {
-  width: 30%;
+  width: 35%;
   font-size: 22px;
   font-weight: bold;
 }
@@ -441,6 +440,12 @@ hr::after {
 
 #experiences #skills .skills-crossword li {
   font-size: 23px;
+  padding-bottom: 18px;
+}
+
+#experiences img {
+  height: 100%;
+  width: 100%;
 }
 
 #sample-projects {
@@ -490,6 +495,25 @@ hr::after {
   padding: 5% calc(25% - 100px);
 }
 
+#contact .hidden {
+  visibility: hidden;
+  position: absolute;
+}
+
+#contact img {
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  cursor: pointer;
+  margin: 5%;
+  padding: 2%;
+  border-radius: 20%;
+}
+
+#contact img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 footer {
   background-color: #F4EEE1;
   text-align: center;
@@ -497,5 +521,48 @@ footer {
   margin-top: 3em;
   font-size: 1.5rem;
   padding: 1em;
+}
+
+@media screen and (max-width: 700px) {
+  #profile #profile-container {
+    display: block;
+  }
+  #profile #profile-container #profile-container-details {
+    margin: 0 auto;
+    width: 90%;
+  }
+  #profile #profile-container #profile-container-about {
+    margin: 0 auto;
+    width: 90%;
+  }
+  #profile #profile-container img {
+    padding: 1rem;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #experiences #education .education-information p {
+    font-size: 17px;
+    padding: 1rem;
+  }
+  #experiences #skills .skills-crossword li {
+    font-size: 17px;
+  }
+  #sample-projects .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #sample-projects .projects .project {
+    width: 100%;
+  }
+  #sample-projects .projects .project p {
+    font-size: 23px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

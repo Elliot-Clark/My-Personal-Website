@@ -1,15 +1,4 @@
-'use strict'
-
-// document.body.addEventListener('click', event => {
-//     let ele = [document.getElementById("header"), document.getElementById("trianglifyBackground")];
-//     for (let x = 0; x < ele.length; x++) {
-//         ele[x].classList.add('header-transition');
-//     }
-//     document.getElementById("profile").style.display = "block";
-//     document.getElementById("experiences").style.display = "block";
-//     document.getElementById("projects").style.display = "block";
-//   });
-
+//'use strict'
 
 let arr = ["Hi, I'm Elliot Clark. I'm a Front End Web Developer!"];
 let arrLetters = arr[0].split('');
@@ -27,3 +16,22 @@ const logoAnimation = () => {
 setTimeout(function(){
     logoAnimation();
  }, 3500);
+
+ //Code for Lazy Loading all images
+ const targets = document.querySelectorAll('img');
+ const lazyLoad = target => {
+   const io = new IntersectionObserver((entries, observer) => {
+     entries.forEach(entry => {
+       if (entry.isIntersecting) {
+         const img = entry.target;
+         const src = img.getAttribute('data-lazy');
+         img.setAttribute('src', src);
+         img.classList.add('fade');
+         observer.disconnect();
+       }
+     });
+   });
+   io.observe(target)
+ };
+
+ targets.forEach(lazyLoad);
