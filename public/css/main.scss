@@ -35,6 +35,12 @@ hr::after {
     position: absolute;
 }
 
+.vector-transition {
+    position: absolute;
+    right: 0;
+    opacity: .5;
+}
+
 #header {
     height: 100vh;
 
@@ -187,6 +193,7 @@ hr::after {
 
 #experiences {
     padding: $padding;
+    padding-top: 150px;
     font-size: 2rem;
     background: $BG2;
 
@@ -264,7 +271,7 @@ hr::after {
     }
 }
 
-#contact {
+#find-me {
     padding: $padding;
 
     .hidden {
@@ -273,17 +280,29 @@ hr::after {
         z-index: -99;
     }
 
-    img { 
-        transition: all .1s ease-in-out;
-        cursor: pointer;
-        margin: 3%;
-        padding: 2%;    
-        border-radius: 20%;
-    }
+    #gif-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        text-align: center;
+        font-family: 'Sansita', sans-serif;
 
-    img:hover {
-        transform: scale(1.2);
-    }
+        span {
+            font-size: 27px;
+            position: relative;
+            top: 20px;
+        }
+
+        img { 
+            transition: all .1s ease-in-out;
+            cursor: pointer;
+            margin: 2%;
+        }
+
+        img:hover {
+            transform: scale(1.2);
+        }
+    } 
 }
 
 footer {
@@ -291,8 +310,8 @@ footer {
     text-align: center;
     font-weight: bold;
     margin-top: 3em;
-    font-size: 1.5rem;
-    padding: 1em;
+    font-size: 1.1rem;
+    padding: 1rem;
 }
 
 @media screen and (max-width: 700px) {
@@ -314,7 +333,16 @@ footer {
             max-width: 300px;
         }
     }
+    #find-me {
+        #gif-container {
+            flex-direction: column;
+            align-items: center;
 
+            p {
+                margin: 10%;
+            }
+        }
+    }
 
 }
 

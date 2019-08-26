@@ -32,6 +32,12 @@ hr::after {
   position: absolute;
 }
 
+.vector-transition {
+  position: absolute;
+  right: 0;
+  opacity: .5;
+}
+
 #header {
   height: 100vh;
 }
@@ -395,6 +401,7 @@ hr::after {
 
 #experiences {
   padding: 5% calc(25% - 100px);
+  padding-top: 150px;
   font-size: 2rem;
   background: #FFF;
 }
@@ -486,26 +493,43 @@ hr::after {
           box-shadow: 0.3em -0.22em 1.5em 0em rgba(0, 0, 0, 0.333);
 }
 
-#contact {
+#find-me {
   padding: 5% calc(25% - 100px);
 }
 
-#contact .hidden {
+#find-me .hidden {
   opacity: 0;
   position: absolute;
   z-index: -99;
 }
 
-#contact img {
+#find-me #gif-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: center;
+  font-family: 'Sansita', sans-serif;
+}
+
+#find-me #gif-container span {
+  font-size: 27px;
+  position: relative;
+  top: 20px;
+}
+
+#find-me #gif-container img {
   -webkit-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
   cursor: pointer;
-  margin: 3%;
-  padding: 2%;
-  border-radius: 20%;
+  margin: 2%;
 }
 
-#contact img:hover {
+#find-me #gif-container img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -515,8 +539,8 @@ footer {
   text-align: center;
   font-weight: bold;
   margin-top: 3em;
-  font-size: 1.5rem;
-  padding: 1em;
+  font-size: 1.1rem;
+  padding: 1rem;
 }
 
 @media screen and (max-width: 700px) {
@@ -534,6 +558,18 @@ footer {
   #profile #profile-container img {
     padding: 1rem;
     max-width: 300px;
+  }
+  #find-me #gif-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #find-me #gif-container p {
+    margin: 10%;
   }
 }
 
