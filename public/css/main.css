@@ -39,7 +39,7 @@ hr::after {
   z-index: 99;
 }
 
-#vector-fix {
+.vector-transition2 {
   bottom: -75px;
 }
 
