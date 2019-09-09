@@ -2,7 +2,6 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +9,12 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="public/css/main.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="shortcut icon" type="image/jpg" href="res/favicon.jpg"/>
         <link href="https://fonts.googleapis.com/css?family=Sansita&display=swap" rel="stylesheet">
     </head>
     <body>
+
         <div id="trianglifyBackground"></div>
         <section id="header">
             <div id="header-container">
@@ -37,32 +38,23 @@
         </section>
 
         <section id="profile">
-            <h1 class="h1-titles">Profile</h1>
-            <h2>I'm a creative Front End Web Developer</h2>
+            <h1 class="h1-titles" data-aos="fade">Profile</h1>
             <hr>
             <div id="profile-container">
-                <div id="profile-container-details">
-                    <h4>Name:</h4>
-                    Elliot Clark <br><br>
-                    <h4>Location</h4>
-                    Silicon Valley<br><br>
-                    <h4>Hobbies</h4>
-                    Gaming, Creating, Animating, and Writing
-                </div>
-                <div id="profile-container-picture">
+                <div id="profile-container-picture" data-aos="fade-right" data-aos-delay="250">
                     <img src="res/placeholder.png" data-lazy="res/image-placeholder.png" alt="Elliot Clark - Profile Image">
                 </div>
-                <div id="profile-container-about">
-                    <h2>About Me</h2>
-                    <p>Highly motivated front end web developer creating intuitive and sleek web experiences with clean code. Self driven and always seeking to learn. Looking to join the right team and put my skills to use.</p>
+                <div id="profile-container-about" data-aos="fade-left" data-aos-delay="250">
+                    <h2>Want to know about me?</h2>
+                    <p>I'm a highly motivated Front-End Developer based in Silicon Valley, CA. I have serious passion for crafting unique designs, animations and intuitive, dynamic user experiences.</p>
                 </div>
             </div>
             <img class="vector-transition" src="res/placeholder.png" data-lazy="res/vector-transition.svg" alt="Transition Vector Pointing Down">
         </section>
 
         <section id="experiences">
-            <div id="education">
-                <h1 class="h1-titles">Education</h1>
+            <div id="education" data-aos="fade" data-aos-duration="2000">
+                <h1 class="h1-titles" data-aos="fade-left">Education</h1>
                 <hr>
                 <div class="education-information">
                     <p>Cal Poly Pomona</p>
@@ -76,11 +68,11 @@
                     <p>Los Gatos High School</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe harum et, maxime molestias temporibus amet, quis non ducimus fugit perspiciatis.</p>
                 </div>
+                <hr>
             </div>
-            <hr>
-            <h1 class="h1-titles">My Skills</h1>
+            <h1 class="h1-titles" data-aos="fade">My Skills</h1>
             <div id="skills">
-                <div class="skills-crossword">
+                <div class="skills-crossword" data-aos="fade-right">
                     <h2>Across</h2><hr>
                     <li>4. A JavaScript runtime environment that executes code outside of a browser.</li>
                     <li>5. A preprocessor scripting language that is interpreted or compiled into CSS.</li>
@@ -88,7 +80,7 @@
                     <li>7. The standard markup language for documents designed to be displayed in a web browser.</li>
                     <li>8. A set of Creative Cloud applications I am experienced in. Including Photoshop, Premiere, and Illustrator. The latter of which was used to create this very crossword!</li>
                 </div>
-                <div class="skills-crossword">
+                <div class="skills-crossword" data-aos="fade-left">
                     <h2>Down</h2><hr>
                     <li>1. A component-based JavaScript library for building user interfaces.</li>
                     <li>2. A style sheet language used for describing the presentation of a document written in a markup language like HTML.</li>
@@ -97,20 +89,20 @@
                     <li>10. A website that provides hosting for software development version control using Git.</li>
                 </div>
             </div>
-            <img src="/res/skills-crossword.svg" data-lazy="/res/skills-crossword.svg" alt="Skills Crossword Puzzle Vector">
-            <!-- Yes, it's filled in already because it would be annoying to solve just to figure out what I know. At least I think it would be. -->
+            <img src="/res/skills-crossword.svg" data-lazy="/res/skills-crossword.svg" data-aos="zoom-in" alt="Skills Crossword Puzzle Vector">
+            <!-- It's filled in already because it would be annoying to solve just to figure out what I know. At least I think it would be. -->
             <img class="vector-transition" src="res/placeholder.png" data-lazy="res/vector-transition2.svg" alt="Transition Vector Pointing Down">
         </section>
 
         <section id="sample-projects">
-            <h1 class="h1-titles">Projects</h1><hr>
+            <h1 class="h1-titles" data-aos="flip-up">Projects</h1><hr>
             <div class="projects">
-                <div class="project">
+                <div class="project" data-aos="zoom-in-right" data-aos-delay="150">
                     <h2>Tic Tac Toe Game</h2>
                     <img src="res/placeholder.png" data-lazy="res/Tic-Tac-Toe.png" alt="Tic Tac Toe Game - Elliot Clark">
                     <p>A simple design, easy to play, and hard to win 4x4 Tic Tac Toe vs. an Ai.</p>
                 </div>
-                <div class="project">
+                <div class="project" data-aos="zoom-in-left" data-aos-delay="150">
                     <h2>Udacity Book Project</h2>
                     <a target="_blank" rel="noopener noreferrer" href=https://github.com/Elliot-Clark/MyReads>
                     <img src="res/placeholder.png" data-lazy="res/image-placeholder.png" alt="Book - Elliot Clark"></a>
@@ -118,13 +110,13 @@
                 </div>
             </div>
             <div class="projects">
-                <div class="project">
+                <div class="project" data-aos="zoom-in-right" data-aos-delay="350">
                     <h2>Crate & Barrel Box Calculator</h2>
                     <a target="_blank" rel="noopener noreferrer" href=https://github.com/Elliot-Clark/Box-Calculator>
                     <img src="res/placeholder.png" data-lazy="res/Crate Box Calculator.png" alt="Box - Elliot Clark"></a>
                     <p>A simple calculator that takes an inputted length, width, and height of a measured area and returns the most appriopriate fitting box size from a list of avaiable sizes. While not the most galmorious project in the world, I included it in this list because I'm proud of it. I made this calculator to save time while working at Crate & Barrel and serves as the first time I've really used my coding skills to make something that is helpful to others. Used daily by myself and my coworkers at Crate & Barrel when packaging items.</p>
                 </div>
-                <div class="project">
+                <div class="project" data-aos="zoom-in-left" data-aos-delay="350">
                     <h2>Portfiolo Website</h2>
                     <a target="_blank" rel="noopener noreferrer" href=https://github.com/Elliot-Clark/My-Website>
                     <img src="res/placeholder.png" data-lazy="res/image-placeholder.png" alt="Book - Elliot Clark"></a>
@@ -134,7 +126,7 @@
             <img class="vector-transition" src="res/placeholder.png" data-lazy="res/vector-transition.svg" alt="Transition Vector Pointing Down">
         </section>
 
-        <section id="find-me">
+        <section id="find-me" data-aos="fade">
             <h1 class="h1-titles">Find Me</h1><hr>
             <img class="hidden" data-lazy="res/Letter-Reverse.gif" alt="Animated Email Gif">
             <img class="hidden" data-lazy='res/Linked-In-Reverse.gif' alt="Animated LinkedIn Gif">
@@ -155,6 +147,15 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
         <script src="public/js/trianglify.js"></script>
         <script src="sw.js"></script> 
-        <script src="public/js/app.js" async defer></script>
+        <script src="public/js/index.js" async defer></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({
+            offset: 150, // offset (in px) from the original trigger point
+            delay: 100, // values from 0 to 3000, with step 50ms
+            duration: 1000, // values from 0 to 3000, with step 50ms
+            once: true
+        });
+        </script>
     </body>
 </html>

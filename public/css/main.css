@@ -36,6 +36,7 @@ hr::after {
   position: absolute;
   right: 0;
   opacity: .5;
+  z-index: 99;
 }
 
 #header {
@@ -377,6 +378,8 @@ hr::after {
 }
 
 #profile #profile-container {
+  width: 60%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -384,12 +387,15 @@ hr::after {
       justify-content: space-around;
 }
 
-#profile #profile-container #profile-container-details {
-  width: 30%;
+#profile #profile-container #profile-container-about {
+  width: 45%;
+  font-size: 1.2rem;
+  margin: 20px;
 }
 
-#profile #profile-container #profile-container-about {
-  width: 30%;
+#profile #profile-container #profile-container-about h2 {
+  font-weight: bold;
+  padding: 2rem;
 }
 
 #profile #profile-container img {
@@ -404,6 +410,11 @@ hr::after {
   padding-top: 150px;
   font-size: 2rem;
   background: #FFF;
+  position: relative;
+}
+
+#experiences .vector-transition {
+  bottom: -75px;
 }
 
 #experiences .education-information {
@@ -453,6 +464,7 @@ hr::after {
 #sample-projects {
   padding: 5% calc(25% - 100px);
   background: #F4EEE1;
+  position: relative;
 }
 
 #sample-projects .projects {

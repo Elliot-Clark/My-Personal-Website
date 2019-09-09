@@ -39,6 +39,7 @@ hr::after {
     position: absolute;
     right: 0;
     opacity: .5;
+    z-index: 99;
 }
 
 #header {
@@ -171,15 +172,20 @@ hr::after {
     text-align: center;
 
     #profile-container {
+        width: 60%;
+        margin: 0 auto;
         display: flex;
         justify-content: space-around;
 
-        #profile-container-details {
-            width: 30%;
-        }
-
         #profile-container-about {
-            width: 30%;
+            width: 45%;
+            font-size: 1.2rem;
+            margin: 20px;
+
+            h2 {
+                font-weight: bold;
+                padding: 2rem;
+            }
         }
 
         img {
@@ -196,6 +202,11 @@ hr::after {
     padding-top: 150px;
     font-size: 2rem;
     background: $BG2;
+    position: relative;
+
+    .vector-transition {
+        bottom: -75px;
+    }
 
     .education-information {
         display: flex;
@@ -239,6 +250,7 @@ hr::after {
 #sample-projects {
     padding: $padding;
     background: $BG;
+    position: relative;
 
     .projects {
         margin: 5%;
