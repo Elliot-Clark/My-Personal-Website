@@ -42,6 +42,10 @@ hr::after {
     z-index: 99;
 }
 
+#vector-fix {
+    bottom: -75px;
+}
+
 #header {
     height: 100vh;
 
@@ -203,10 +207,6 @@ hr::after {
     font-size: 2rem;
     background: $BG2;
     position: relative;
-
-    #vector-fix {
-        bottom: -75px;
-    }
 
     .education-information {
         display: flex;
