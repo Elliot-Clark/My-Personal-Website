@@ -37,6 +37,7 @@ hr::after {
   right: 0;
   opacity: .5;
   z-index: 99;
+  min-height: 65px;
 }
 
 #header {
@@ -378,7 +379,6 @@ hr::after {
 }
 
 #profile #profile-container {
-  width: 60%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -415,7 +415,7 @@ hr::after {
 }
 
 #experiences .vector-transition {
-  bottom: -75px;
+  bottom: -4vw;
 }
 
 #experiences .education-information {
@@ -562,6 +562,15 @@ footer {
 }
 
 @media screen and (max-width: 930px) {
+  #profile {
+    padding: 5%;
+  }
+  #profile #profile-container {
+    width: 100%;
+  }
+  #profile #profile-container #profile-container-about {
+    width: 100%;
+  }
   #find-me #gif-container p img {
     width: 120px;
   }
@@ -570,18 +579,6 @@ footer {
 @media screen and (max-width: 700px) {
   #profile #profile-container {
     display: block;
-  }
-  #profile #profile-container #profile-container-details {
-    margin: 0 auto;
-    width: 90%;
-  }
-  #profile #profile-container #profile-container-about {
-    margin: 0 auto;
-    width: 90%;
-  }
-  #profile #profile-container img {
-    padding: 1rem;
-    max-width: 300px;
   }
   #find-me #gif-container {
     -webkit-box-orient: vertical;
