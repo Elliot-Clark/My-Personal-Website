@@ -402,7 +402,8 @@ hr::after {
   min-width: 250px;
   max-width: 350px;
   min-height: 350px;
-  padding: 2rem;
+  border-radius: 100%;
+  border: 20px solid #d0c2b1;
 }
 
 #experiences {
@@ -484,15 +485,15 @@ hr::after {
 }
 
 #sample-projects .projects .project h2 {
-  margin-bottom: 40px;
+  font-weight: bold;
 }
 
 #sample-projects .projects .project img {
   width: 170px;
   margin: 5%;
-  border-radius: 20px;
   -webkit-box-shadow: 1em -0.66em 1.5em 0.3em rgba(0, 0, 0, 0.333);
           box-shadow: 1em -0.66em 1.5em 0.3em rgba(0, 0, 0, 0.333);
+  border: 2px solid grey;
   cursor: pointer;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -501,6 +502,7 @@ hr::after {
 #sample-projects .projects .project img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  border-radius: 25px;
   -webkit-box-shadow: 0.3em -0.22em 1.5em 0em rgba(0, 0, 0, 0.333);
           box-shadow: 0.3em -0.22em 1.5em 0em rgba(0, 0, 0, 0.333);
 }
@@ -521,6 +523,10 @@ hr::after {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -555,6 +561,12 @@ footer {
   padding: 1rem;
 }
 
+@media screen and (max-width: 930px) {
+  #find-me #gif-container p img {
+    width: 120px;
+  }
+}
+
 @media screen and (max-width: 700px) {
   #profile #profile-container {
     display: block;
@@ -581,7 +593,10 @@ footer {
             align-items: center;
   }
   #find-me #gif-container p {
-    margin: 10%;
+    margin: 7%;
+  }
+  #find-me #gif-container p img {
+    width: 200px;
   }
 }
 

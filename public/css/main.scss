@@ -6,6 +6,7 @@ $BG: #F4EEE1;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    
 }
 
 html, body {
@@ -192,7 +193,8 @@ hr::after {
             min-width: 250px;
             max-width: 350px;
             min-height: 350px;
-            padding: 2rem;
+            border-radius: 100%;
+            border: 20px solid #d0c2b1;
         }
     }
 }
@@ -263,20 +265,21 @@ hr::after {
             position: relative;
 
             h2 {
-                margin-bottom: 40px;
+                font-weight: bold;
             }
 
             img {
                 width: 170px;
                 margin: 5%;
-                border-radius: 20px;
                 box-shadow: 1em -.66em 1.5em .3em rgba(0,0,0,0.333);
+                border: 2px solid grey;
                 cursor: pointer;
                 transition: all .3s ease-in-out;
             }
 
             img:hover {
                 transform: scale(1.2);
+                border-radius: 25px;
                 box-shadow: .3em -.22em 1.5em 0em rgba(0,0,0,0.333);
             }
         }
@@ -295,6 +298,7 @@ hr::after {
     #gif-container {
         display: flex;
         justify-content: space-around;
+        flex-direction: row;
         align-items: flex-end;
         text-align: center;
         font-family: 'Sansita', sans-serif;
@@ -326,6 +330,16 @@ footer {
     padding: 1rem;
 }
 
+@media screen and (max-width: 930px) {
+    #find-me {
+        #gif-container {
+            p img {
+                width: 120px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 700px) {
     #profile #profile-container {
         display: block;
@@ -351,7 +365,10 @@ footer {
             align-items: center;
 
             p {
-                margin: 10%;
+                margin: 7%;
+                img {
+                    width: 200px;
+                }
             }
         }
     }
@@ -378,7 +395,6 @@ footer {
             p {
                 font-size: 23px;
             }
-
         }
     }
 }

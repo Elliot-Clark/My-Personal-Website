@@ -38,11 +38,10 @@
         </section>
 
         <section id="profile">
-            <h1 class="h1-titles" data-aos="fade">Profile</h1>
-            <hr>
+            <h1 class="h1-titles" data-aos="fade">Profile<hr></h1>
             <div id="profile-container">
                 <div id="profile-container-picture" data-aos="fade-right" data-aos-delay="250">
-                    <img src="res/placeholder.png" data-lazy="res/image-placeholder.png" alt="Elliot Clark - Profile Image">
+                    <img src="res/placeholder.png" data-lazy="res/Elliot-Clark.jpg" alt="Elliot Clark - Profile Image">
                 </div>
                 <div id="profile-container-about" data-aos="fade-left" data-aos-delay="250">
                     <h2>Want to know about me?</h2>
@@ -78,7 +77,7 @@
                     <li>5. A preprocessor scripting language that is interpreted or compiled into CSS.</li>
                     <li>6. <i>The</i> programming language of HTML and the Web.</li>
                     <li>7. The standard markup language for documents designed to be displayed in a web browser.</li>
-                    <li>8. A set of Creative Cloud applications I am experienced in. Including Photoshop, Premiere, and Illustrator. The latter of which was used to create this very crossword!</li>
+                    <li>8. A set of Creative Cloud applications I am experienced in. Including Photoshop, Animate, Premiere, and Illustrator. The latter of which was used to create this very crossword!</li>
                 </div>
                 <div class="skills-crossword" data-aos="fade-left">
                     <h2>Down</h2><hr>
@@ -89,7 +88,7 @@
                     <li>10. A website that provides hosting for software development version control using Git.</li>
                 </div>
             </div>
-            <img src="/res/skills-crossword.svg" data-lazy="/res/skills-crossword.svg" data-aos="zoom-in" alt="Skills Crossword Puzzle Vector">
+            <img src="/res/skills-crossword.svg" data-lazy="/res/skills-crossword.svg" data-aos="fade" alt="Skills Crossword Puzzle Vector">
             <!-- It's filled in already because it would be annoying to solve just to figure out what I know. At least I think it would be. -->
             <img class="vector-transition" src="res/placeholder.png" data-lazy="res/vector-transition2.svg" alt="Transition Vector Pointing Down">
         </section>
@@ -126,12 +125,12 @@
             <img class="vector-transition" src="res/placeholder.png" data-lazy="res/vector-transition.svg" alt="Transition Vector Pointing Down">
         </section>
 
-        <section id="find-me" data-aos="fade">
-            <h1 class="h1-titles">Find Me</h1><hr>
+        <section id="find-me">
+            <h1 class="h1-titles" data-aos="fade">Find Me</h1><hr data-aos="fade">
             <img class="hidden" data-lazy="res/Letter-Reverse.gif" alt="Animated Email Gif">
             <img class="hidden" data-lazy='res/Linked-In-Reverse.gif' alt="Animated LinkedIn Gif">
-            <div id="gif-container">
-                <p><img src="res/placeholder.png" data-lazy="res/Letter-Static.jpg" onmouseover="this.src='res/Letter-Open.gif'" onmouseout="this.src='res/Letter-Reverse.gif'" alt="Animated Email Gif"><span>Email</span></p>
+            <div id="gif-container" data-aos="fade" data-aos-delay="500">
+                <p><a href="mailto:etcclark@gmail.com" target="_top"><img src="res/placeholder.png" data-lazy="res/Letter-Static.jpg" onmouseover="this.src='res/Letter-Open.gif'" onmouseout="this.src='res/Letter-Reverse.gif'" alt="Animated Email Gif"></a><span>Email</span></p>
                 <p><a href="https://www.linkedin.com/in/elliot-clark-05002a106/" target="_blank"><img src="res/placeholder.png" data-lazy="res/Linked-In-Static.jpg" onmouseover="this.src='res/Linked-In.gif'" onmouseout="this.src='res/Linked-In-Reverse.gif'" alt="Animated LinkedIn Gif"></a><br><span>Linked In</span></pn>
                 <p><a href="https://codepen.io/Everyone" target="_blank"><img src="res/placeholder.png" data-lazy="res/Codepen-Logo-Static.jpg" onmouseover="this.src='res/Codepen-Logo-Animated.gif'" onmouseout="this.src='res/Codepen-Logo-Animated.gif'" alt="Animated Codepen Gif"></a><span>Codepen</span></p>
                 <p><a href="https://github.com/Elliot-Clark" target="_blank"><img src="res/placeholder.png" data-lazy="res/Github-Logo-Static.jpg" onmouseover="this.src='res/Github-Logo.gif'" onmouseout="this.src='res/Github-Logo-Static.jpg'" alt="Animated Github Gif"></a><span>Github</span></p>
@@ -151,7 +150,7 @@
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
           AOS.init({
-            offset: 150, // offset (in px) from the original trigger point
+            offset: 250, // offset (in px) from the original trigger point
             delay: 100, // values from 0 to 3000, with step 50ms
             duration: 1000, // values from 0 to 3000, with step 50ms
             once: true
