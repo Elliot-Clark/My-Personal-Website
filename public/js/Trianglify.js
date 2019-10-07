@@ -1,3 +1,4 @@
+'use strict'
 //Code is written to redraw the Trianglify background whenever the screen size changes
 console.log("Test");
 
