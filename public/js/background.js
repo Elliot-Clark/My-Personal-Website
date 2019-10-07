@@ -1,10 +1,5 @@
-console.log("hello2!");
-
-console.log("Test");
 'use strict'
 //Code is written to redraw the Trianglify background whenever the screen size changes
-
-
 const renders = () => {
     if (document.getElementsByTagName("canvas")[0]) {
         document.getElementsByTagName("canvas")[0].remove();
