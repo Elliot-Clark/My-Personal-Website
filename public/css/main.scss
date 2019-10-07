@@ -44,6 +44,7 @@ hr::after {
     opacity: .5;
     z-index: 99;
     min-height: 65px;
+    max-width: 100vw;
 }
 
 #header {
@@ -208,10 +209,6 @@ hr::after {
     background: $BG2;
     position: relative;
 
-    .vector-transition {
-        bottom: -4vw;
-    }
-
     .education-information {
         display: flex;
         justify-content: space-between;
@@ -273,7 +270,7 @@ hr::after {
             img {
                 width: 170px;
                 margin: 5%;
-                box-shadow: 1em -.66em 1.5em .3em rgba(0,0,0,0.333);
+                box-shadow: 1em -.66em 1.5em .3em rgba(0,0,0,0.13);
                 border: 2px solid grey;
                 cursor: pointer;
                 transition: all .3s ease-in-out;
@@ -335,10 +332,9 @@ footer {
         padding: 5%;
 
         #profile-container {
-            width: 100%;
-
             #profile-container-about {
                 width: 100%;
+                margin: 0 auto;
             }
         }
     }
