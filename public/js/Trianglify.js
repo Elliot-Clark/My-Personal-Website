@@ -2,7 +2,7 @@
 //Code is written to redraw the Trianglify background whenever the screen size changes
 console.log("Test");
 
-const render = () => {
+const renders = () => {
     if (document.getElementsByTagName("canvas")[0]) {
         document.getElementsByTagName("canvas")[0].remove();
     }
@@ -18,5 +18,5 @@ const render = () => {
     const trianglifyBackground = document.getElementById("trianglifyBackground");
     trianglifyBackground.appendChild(pattern.canvas());
 }
-window.onload = render;
-window.onresize = render; 
+window.onload = renders;
+window.onresize = renders; 
