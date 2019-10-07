@@ -3,6 +3,8 @@
           box-sizing: border-box;
   padding: 0;
   margin: 0;
+  line-height: 1.5;
+  font-family: Gilroy, sans-serif;
 }
 
 html, body {
@@ -531,7 +533,6 @@ hr::after {
       -ms-flex-align: end;
           align-items: flex-end;
   text-align: center;
-  font-family: 'Sansita', sans-serif;
 }
 
 #find-me #gif-container span {
@@ -555,9 +556,8 @@ hr::after {
 footer {
   background-color: #F4EEE1;
   text-align: center;
-  font-weight: bold;
   margin-top: 3em;
-  font-size: 1.1rem;
+  font-size: .875rem;
   padding: 1rem;
 }
 
