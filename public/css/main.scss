@@ -43,8 +43,6 @@ hr::after {
     right: 0;
     opacity: .5;
     z-index: 99;
-    min-height: 65px;
-    width: 100vw;
 }
 
 #header {
@@ -349,9 +347,14 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
+    .vector-transition {
+        width: 100%;
+    }
+
     #profile #profile-container {
         display: block;
     }
+    
     #find-me {
         #gif-container {
             flex-direction: column;
