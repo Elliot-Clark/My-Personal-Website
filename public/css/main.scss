@@ -263,6 +263,7 @@ hr::after {
 
             h2 {
                 font-weight: bold;
+                font-size: calc(1.5vw + 5px);
             }
 
             img {
@@ -278,6 +279,10 @@ hr::after {
                 transform: scale(1.2);
                 border-radius: 25px;
                 box-shadow: .3em -.22em 1.5em 0em rgba(0,0,0,0.333);
+            }
+
+            p {
+                font-size: calc(1.2vw + 5px);
             }
         }
     }
@@ -299,8 +304,12 @@ hr::after {
         align-items: flex-end;
         text-align: center;
 
+        p {
+            margin: 5%;
+        }
+
         span {
-            font-size: 27px;
+            font-size: 23px;
             position: relative;
             top: 20px;
         }
@@ -339,7 +348,7 @@ footer {
 
     #find-me {
         #gif-container {
-            p img {
+            img {
                 width: 120px;
             }
         }
@@ -353,6 +362,20 @@ footer {
 
     #profile #profile-container {
         display: block;
+    }
+
+    #sample-projects {
+        .projects {
+            .project {
+                h2 {
+                    font-size: 3.2vw;
+                }
+
+                p {
+                    font-size: 2.6vw;
+                }
+            }
+        }
     }
     
     #find-me {
@@ -371,7 +394,7 @@ footer {
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 440px) {
     #experiences #education .education-information p {
         font-size: 17px;
         padding: 1rem;
@@ -388,8 +411,12 @@ footer {
         .project {
             width: 100%;
 
-            p {
+            h2 {
                 font-size: 23px;
+            }
+
+            p {
+                font-size: 19px;
             }
         }
     }

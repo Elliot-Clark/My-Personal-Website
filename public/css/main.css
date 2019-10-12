@@ -483,6 +483,7 @@ hr::after {
 
 #sample-projects .projects .project h2 {
   font-weight: bold;
+  font-size: calc(1.5vw + 5px);
 }
 
 #sample-projects .projects .project img {
@@ -502,6 +503,10 @@ hr::after {
   border-radius: 25px;
   -webkit-box-shadow: 0.3em -0.22em 1.5em 0em rgba(0, 0, 0, 0.333);
           box-shadow: 0.3em -0.22em 1.5em 0em rgba(0, 0, 0, 0.333);
+}
+
+#sample-projects .projects .project p {
+  font-size: calc(1.2vw + 5px);
 }
 
 #find-me {
@@ -530,8 +535,12 @@ hr::after {
   text-align: center;
 }
 
+#find-me #gif-container p {
+  margin: 5%;
+}
+
 #find-me #gif-container span {
-  font-size: 27px;
+  font-size: 23px;
   position: relative;
   top: 20px;
 }
@@ -564,7 +573,7 @@ footer {
     width: 100%;
     margin: 0 auto;
   }
-  #find-me #gif-container p img {
+  #find-me #gif-container img {
     width: 120px;
   }
 }
@@ -575,6 +584,12 @@ footer {
   }
   #profile #profile-container {
     display: block;
+  }
+  #sample-projects .projects .project h2 {
+    font-size: 3.2vw;
+  }
+  #sample-projects .projects .project p {
+    font-size: 2.6vw;
   }
   #find-me #gif-container {
     -webkit-box-orient: vertical;
@@ -593,7 +608,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 440px) {
   #experiences #education .education-information p {
     font-size: 17px;
     padding: 1rem;
@@ -613,8 +628,11 @@ footer {
   #sample-projects .projects .project {
     width: 100%;
   }
-  #sample-projects .projects .project p {
+  #sample-projects .projects .project h2 {
     font-size: 23px;
+  }
+  #sample-projects .projects .project p {
+    font-size: 19px;
   }
 }
 /*# sourceMappingURL=main.css.map */
