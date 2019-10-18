@@ -465,30 +465,40 @@ hr::after {
   position: relative;
 }
 
-#sample-projects .projects {
-  margin: 5%;
+#sample-projects .project {
+  position: relative;
+  border: solid 2px #ffa033;
+  border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  background-color: #F4EEE1;
+  z-index: 1;
 }
 
-#sample-projects .projects .project {
-  width: 45%;
-  text-align: center;
-  position: relative;
-}
-
-#sample-projects .projects .project h2 {
+#sample-projects .project h2 {
   font-weight: bold;
-  font-size: calc(1.5vw + 5px);
+  font-style: italic;
+  text-decoration: underline;
 }
 
-#sample-projects .projects .project img {
+#sample-projects .project span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+#sample-projects .project img {
   width: 170px;
-  margin: 5%;
+  margin: 2vw;
   -webkit-box-shadow: 1em -0.66em 1.5em 0.3em rgba(0, 0, 0, 0.13);
           box-shadow: 1em -0.66em 1.5em 0.3em rgba(0, 0, 0, 0.13);
   border: 2px solid grey;
@@ -497,7 +507,7 @@ hr::after {
   transition: all .3s ease-in-out;
 }
 
-#sample-projects .projects .project img:hover {
+#sample-projects .project img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   border-radius: 25px;
@@ -505,8 +515,26 @@ hr::after {
           box-shadow: 0.3em -0.22em 1.5em 0em rgba(0, 0, 0, 0.333);
 }
 
-#sample-projects .projects .project p {
-  font-size: calc(1.2vw + 5px);
+#sample-projects .project p {
+  font-size: 1.5rem;
+}
+
+#sample-projects :nth-child(4n+1) {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#sample-projects .vr {
+  border-right: 3px solid #ffa033;
+  height: 40px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#sample-projects :nth-child(6) {
+  margin: 0;
+  width: 25%;
 }
 
 #find-me {

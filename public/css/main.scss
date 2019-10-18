@@ -1,6 +1,6 @@
+$BG: #F4EEE1;
 $BG2: #FFF;
 $padding: 5% calc(25% - 100px);
-$BG: #F4EEE1;
 
 * {
     box-sizing: border-box;
@@ -251,40 +251,61 @@ hr::after {
     background: $BG;
     position: relative;
 
-    .projects {
-        margin: 5%;
+    .project {
+        position: relative;
+        border: solid 2px rgb(255, 160, 51);
+        border-radius: 20px;
         display: flex;
-        justify-content: space-between;
+        background-color: $BG;
+        z-index: 1;
 
-        .project {
-            width: 45%;
-            text-align: center;
-            position: relative;
-
-            h2 {
-                font-weight: bold;
-                font-size: calc(1.5vw + 5px);
-            }
-
-            img {
-                width: 170px;
-                margin: 5%;
-                box-shadow: 1em -.66em 1.5em .3em rgba(0,0,0,0.13);
-                border: 2px solid grey;
-                cursor: pointer;
-                transition: all .3s ease-in-out;
-            }
-
-            img:hover {
-                transform: scale(1.2);
-                border-radius: 25px;
-                box-shadow: .3em -.22em 1.5em 0em rgba(0,0,0,0.333);
-            }
-
-            p {
-                font-size: calc(1.2vw + 5px);
-            }
+        h2 {
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
         }
+
+        span {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        img {
+            width: 170px;
+            margin: 2vw;
+            box-shadow: 1em -.66em 1.5em .3em rgba(0,0,0,0.13);
+            border: 2px solid grey;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.2);
+            border-radius: 25px;
+            box-shadow: .3em -.22em 1.5em 0em rgba(0,0,0,0.333);
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    :nth-child(4n+1) {
+        justify-content: flex-end;
+    }
+
+    .vr {
+        border-right: 3px solid rgb(255, 160, 51);;
+        height:40px;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    :nth-child(6) {
+        margin: 0;
+        width: 25%;
     }
 }
 
