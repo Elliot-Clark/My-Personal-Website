@@ -3,6 +3,8 @@
           box-sizing: border-box;
   padding: 0;
   margin: 0;
+  line-height: 1.5;
+  font-family: Gilroy, sans-serif;
 }
 
 html, body {
@@ -30,6 +32,13 @@ hr::after {
 
 #trianglifyBackground {
   position: absolute;
+}
+
+.vector-transition {
+  position: absolute;
+  right: 0;
+  opacity: .5;
+  z-index: 99;
 }
 
 #header {
@@ -371,33 +380,44 @@ hr::after {
 }
 
 #profile #profile-container {
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 #profile #profile-container #profile-container-about {
-  width: 30%;
+  width: 45%;
+  font-size: 1.2rem;
+  margin: 20px;
 }
 
-#profile #profile-container #profile-container-details {
-  width: 30%;
+#profile #profile-container #profile-container-about h2 {
+  font-weight: bold;
+  padding: 2rem;
+}
+
+#profile #profile-container #profile-container-about h1 {
+  color: #ffa033;
+  text-decoration: underline;
 }
 
 #profile #profile-container img {
-  width: inherit;
   min-width: 250px;
-  max-width: 320px;
-  padding-top: 2rem;
+  max-width: 350px;
+  min-height: 350px;
+  border-radius: 100%;
+  border: 20px solid #d0c2b1;
 }
 
 #experiences {
   padding: 5% calc(25% - 100px);
+  padding-top: 150px;
   font-size: 2rem;
   background: #FFF;
+  position: relative;
 }
 
 #experiences .education-information {
@@ -411,7 +431,7 @@ hr::after {
 }
 
 #experiences .education-information p:nth-child(1) {
-  width: 30%;
+  width: 35%;
   font-size: 22px;
   font-weight: bold;
 }
@@ -441,61 +461,210 @@ hr::after {
 
 #experiences #skills .skills-crossword li {
   font-size: 23px;
+  padding-bottom: 18px;
 }
 
 #sample-projects {
   padding: 5% calc(25% - 100px);
   background: #F4EEE1;
-}
-
-#sample-projects .projects {
-  margin: 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#sample-projects .projects .project {
-  width: 45%;
-  text-align: center;
   position: relative;
 }
 
-#sample-projects .projects .project h2 {
-  margin-bottom: 40px;
+#sample-projects .project {
+  position: relative;
+  border: solid 5px #ffa033;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F4EEE1;
+  z-index: 1;
 }
 
-#sample-projects .projects .project img {
+#sample-projects .project h2 {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2.5em;
+}
+
+#sample-projects .project span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+#sample-projects .project img {
   width: 170px;
-  margin: 5%;
-  border-radius: 20px;
-  -webkit-box-shadow: 1em -0.66em 1.5em 0.3em rgba(0, 0, 0, 0.333);
-          box-shadow: 1em -0.66em 1.5em 0.3em rgba(0, 0, 0, 0.333);
+  margin: 2vw;
+  -webkit-box-shadow: 1em -0.66em 1.5em 0.3em rgba(0, 0, 0, 0.13);
+          box-shadow: 1em -0.66em 1.5em 0.3em rgba(0, 0, 0, 0.13);
+  border: 2px solid grey;
   cursor: pointer;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
-#sample-projects .projects .project img:hover {
+#sample-projects .project img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  border-radius: 25px;
   -webkit-box-shadow: 0.3em -0.22em 1.5em 0em rgba(0, 0, 0, 0.333);
           box-shadow: 0.3em -0.22em 1.5em 0em rgba(0, 0, 0, 0.333);
 }
 
-#contact {
+#sample-projects .project p {
+  font-size: 1.5rem;
+}
+
+#sample-projects :nth-child(4n+1) {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#sample-projects .vr {
+  border-right: 15px solid #ffa033;
+  height: 40px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#sample-projects :nth-child(6) {
+  margin: 0;
+  width: 25%;
+}
+
+#find-me {
   padding: 5% calc(25% - 100px);
+}
+
+#find-me .hidden {
+  opacity: 0;
+  position: absolute;
+  z-index: -99;
+}
+
+#find-me #gif-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: center;
+}
+
+#find-me #gif-container p {
+  margin: 5%;
+}
+
+#find-me #gif-container span {
+  font-size: 23px;
+  position: relative;
+  top: 20px;
+}
+
+#find-me #gif-container img {
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  cursor: pointer;
+  margin: 2%;
+}
+
+#find-me #gif-container img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 footer {
   background-color: #F4EEE1;
   text-align: center;
-  font-weight: bold;
   margin-top: 3em;
-  font-size: 1.5rem;
-  padding: 1em;
+  font-size: .875rem;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 930px) {
+  #profile {
+    padding: 5%;
+  }
+  #profile #profile-container #profile-container-about {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #find-me #gif-container img {
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .vector-transition {
+    width: 100vw;
+  }
+  #profile #profile-container {
+    display: block;
+  }
+  #sample-projects .projects .project h2 {
+    font-size: 3.2vw;
+  }
+  #sample-projects .projects .project p {
+    font-size: 2.6vw;
+  }
+  #find-me #gif-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #find-me #gif-container p {
+    margin: 7%;
+  }
+  #find-me #gif-container p img {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  #experiences #education .education-information p {
+    font-size: 17px;
+    padding: 1rem;
+  }
+  #experiences #skills .skills-crossword li {
+    font-size: 17px;
+  }
+  #sample-projects .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #sample-projects .projects .project {
+    width: 100%;
+  }
+  #sample-projects .projects .project h2 {
+    font-size: 23px;
+  }
+  #sample-projects .projects .project p {
+    font-size: 19px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
