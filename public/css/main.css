@@ -397,14 +397,11 @@ hr::after {
 #profile #profile-container #profile-container-about h2 {
   font-weight: bold;
   padding: 2rem;
-<<<<<<< HEAD
 }
 
 #profile #profile-container #profile-container-about h1 {
   color: #ffa033;
   text-decoration: underline;
-=======
->>>>>>> 57f0a84b4fe7041ea9d37baff213d265127a257f
 }
 
 #profile #profile-container img {
@@ -475,12 +472,7 @@ hr::after {
 
 #sample-projects .project {
   position: relative;
-<<<<<<< HEAD
   border: solid 5px #ffa033;
-=======
-  border: solid 2px #ffa033;
-  border-radius: 20px;
->>>>>>> 57f0a84b4fe7041ea9d37baff213d265127a257f
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -491,11 +483,7 @@ hr::after {
 #sample-projects .project h2 {
   font-weight: bold;
   font-style: italic;
-<<<<<<< HEAD
   font-size: 2.5em;
-=======
-  text-decoration: underline;
->>>>>>> 57f0a84b4fe7041ea9d37baff213d265127a257f
 }
 
 #sample-projects .project span {
@@ -542,11 +530,7 @@ hr::after {
 }
 
 #sample-projects .vr {
-<<<<<<< HEAD
   border-right: 15px solid #ffa033;
-=======
-  border-right: 3px solid #ffa033;
->>>>>>> 57f0a84b4fe7041ea9d37baff213d265127a257f
   height: 40px;
   width: 50%;
   margin: 0 auto;

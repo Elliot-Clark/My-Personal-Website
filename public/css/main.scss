@@ -184,7 +184,6 @@ hr::after {
             width: 45%;
             font-size: 1.2rem;
             margin: 20px;
-<<<<<<< HEAD
 
             h2 {
                 font-weight: bold;
@@ -194,12 +193,6 @@ hr::after {
             h1 {
                 color: $main;
                 text-decoration: underline;
-=======
-
-            h2 {
-                font-weight: bold;
-                padding: 2rem;
->>>>>>> 57f0a84b4fe7041ea9d37baff213d265127a257f
             }
         }
 
@@ -266,12 +259,7 @@ hr::after {
 
     .project {
         position: relative;
-<<<<<<< HEAD
         border: solid 5px rgb(255, 160, 51);
-=======
-        border: solid 2px rgb(255, 160, 51);
-        border-radius: 20px;
->>>>>>> 57f0a84b4fe7041ea9d37baff213d265127a257f
         display: flex;
         background-color: $BG;
         z-index: 1;
@@ -279,11 +267,7 @@ hr::after {
         h2 {
             font-weight: bold;
             font-style: italic;
-<<<<<<< HEAD
             font-size: 2.5em;
-=======
-            text-decoration: underline;
->>>>>>> 57f0a84b4fe7041ea9d37baff213d265127a257f
         }
 
         span {
@@ -318,11 +302,7 @@ hr::after {
     }
 
     .vr {
-<<<<<<< HEAD
         border-right: 15px solid rgb(255, 160, 51);
-=======
-        border-right: 3px solid rgb(255, 160, 51);;
->>>>>>> 57f0a84b4fe7041ea9d37baff213d265127a257f
         height:40px;
         width: 50%;
         margin: 0 auto;
