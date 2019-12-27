@@ -9,6 +9,7 @@
 
 html, body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
   font-family: 'Open Sans', sans-serif !important;
 }
 
@@ -373,6 +374,52 @@ hr::after {
   }
 }
 
+#header img {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 4em;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-name: down;
+          animation-name: down;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes down {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes down {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-40px);
+            transform: translateY(-40px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 #profile {
   padding: 5% calc(25% - 100px);
   background: #F4EEE1;
@@ -465,9 +512,10 @@ hr::after {
 }
 
 #sample-projects {
+  -webkit-clip-path: polygon(50% 5%, 100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
+          clip-path: polygon(50% 5%, 100% 0, 100% 95%, 50% 100%, 0 95%, 0 0);
   padding: 5% calc(25% - 100px);
   background: #F4EEE1;
-  position: relative;
 }
 
 #sample-projects .project {
@@ -500,8 +548,15 @@ hr::after {
   text-align: center;
 }
 
+#sample-projects .project a {
+  cursor: default;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 #sample-projects .project img {
   width: 170px;
+  height: 170px;
   margin: 2vw;
   -webkit-box-shadow: 1em -0.66em 1.5em 0.3em rgba(0, 0, 0, 0.13);
           box-shadow: 1em -0.66em 1.5em 0.3em rgba(0, 0, 0, 0.13);
@@ -515,8 +570,9 @@ hr::after {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   border-radius: 25px;
-  -webkit-box-shadow: 0.3em -0.22em 1.5em 0em rgba(0, 0, 0, 0.333);
-          box-shadow: 0.3em -0.22em 1.5em 0em rgba(0, 0, 0, 0.333);
+  -webkit-box-shadow: 10px 0 2px 0.5px #777;
+          box-shadow: 10px 0 2px 0.5px #777;
+  opacity: 0.8;
 }
 
 #sample-projects .project p {
@@ -617,10 +673,10 @@ footer {
   #profile #profile-container {
     display: block;
   }
-  #sample-projects .projects .project h2 {
+  #sample-projects .project h2 {
     font-size: 3.2vw;
   }
-  #sample-projects .projects .project p {
+  #sample-projects .project p {
     font-size: 2.6vw;
   }
   #find-me #gif-container {
