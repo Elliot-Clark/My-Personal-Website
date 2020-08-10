@@ -286,7 +286,7 @@ hr::after {
         h2 {
             font-weight: bold;
             font-style: italic;
-            font-size: 2.5em;
+            font-size: 2.1em;
         }
 
         span {
@@ -306,7 +306,6 @@ hr::after {
             width: 170px;
             height: 170px;
             margin: 2vw;
-            box-shadow: 1em -.66em 1.5em .3em rgba(0,0,0,0.13);
             border: 2px solid grey;
             cursor: pointer;
             transition: all .3s ease-in-out;
@@ -315,29 +314,20 @@ hr::after {
         img:hover {
             transform: scale(1.2);
             border-radius: 25px;
-            box-shadow: 10px 0 2px 0.5px #777;
+            box-shadow: 2px 0 2px 0.5px #777;
             opacity: 0.8;
         }
 
         p {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
-    }
-
-    :nth-child(4n+1) {
-        justify-content: flex-end;
     }
 
     .vr {
         border-right: 15px solid rgb(255, 160, 51);
         height:40px;
-        width: 50%;
+        width: 0%;
         margin: 0 auto;
-    }
-
-    :nth-child(6) {
-        margin: 0;
-        width: 25%;
     }
 }
 
