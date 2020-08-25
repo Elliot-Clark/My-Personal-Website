@@ -528,6 +528,10 @@ hr::after {
   z-index: 1;
 }
 
+#sample-projects .project hr {
+  width: auto;
+}
+
 #sample-projects .project h2 {
   font-weight: bold;
   font-style: italic;
@@ -546,6 +550,10 @@ hr::after {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+}
+
+#sample-projects .project span p {
+  padding: 0 5%;
 }
 
 #sample-projects .project a {
@@ -662,6 +670,10 @@ footer {
   }
   #sample-projects .project h2 {
     font-size: 3.2vw;
+    margin-top: 1em;
+  }
+  #sample-projects .project hr {
+    height: 15px;
   }
   #sample-projects .project p {
     font-size: 2.6vw;

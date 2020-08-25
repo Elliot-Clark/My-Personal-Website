@@ -283,6 +283,10 @@ hr::after {
         background-color: $BG;
         z-index: 1;
 
+        hr {
+            width: auto;
+        }
+
         h2 {
             font-weight: bold;
             font-style: italic;
@@ -294,6 +298,10 @@ hr::after {
             justify-content: center;
             flex-direction: column;
             text-align: center;
+
+            p {
+                padding: 0 5%;
+            }
         }
 
         a {
@@ -411,6 +419,11 @@ footer {
         .project {
             h2 {
                 font-size: 3.2vw;
+                margin-top: 1em;
+            }
+
+            hr {
+                height: 15px;
             }
 
             p {
